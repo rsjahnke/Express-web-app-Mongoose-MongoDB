@@ -1,0 +1,32 @@
+<div>
+	<div class="table-responsive">
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th>First Number</th>
+					<th>Last Name</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each data}}
+					<tr>
+						<td>{{this.firstName}}</td>
+						<td>{{this.lastName}}</td>
+						</td>
+						<td>
+							<a href="/employees/edit/{{this.id}}">Edit</a>
+							<a href="/employees/delete/{{this.id}}">Delete</a>
+						</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			<tfooter>
+				<tr><td>
+				<button class="btn btn-primary" 
+						onClick="addEmployee();">Add</button>
+				</td></tr>
+			</tfooter>
+		</table>
+	</div>
+</div>
